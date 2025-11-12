@@ -8,15 +8,15 @@
 </head>
 <body>
     <h1>Homepage</h1>
-    <button><a href="/new">Add new message</a></button>
-    <ul>
-        <% messages.forEach((message) => { %>
-            <li>
-                <h3><%= message.user %></h3>
-                <h5>Created on <%= message.added %></h5>
-                <p><%= message.text %></p>
-            </li>
-        <% }) %>
-    </ul>
+    <button class="add-button"><a href="/new">Add new message</a></button>
+    <div class="container">
+            <% messages.forEach((message) => { %>
+                <div>
+                    <h3><%= message.user %></h3>
+                    <h5>Created on <%= message.added %></h5>
+                    <p><%= message.text %></p>
+                </div>
+            <% }) %>
+    </div>
 </body>
 </html>
