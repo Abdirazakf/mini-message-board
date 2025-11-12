@@ -19,4 +19,13 @@ indexRouter.get('/', (req, res) => {
     res.render("index", {title: "Message Board", messages: messages})
 })
 
+indexRouter.get('/new', (req,res) => {
+    res.render("form")
+})
+
+indexRouter.post('/new', (req,res) => {
+    messages.push({text: req.body.message, user: req.body.author, added: new Date()})
+    res.redirect('/')
+})
+
 module.exports = indexRouter
