@@ -10,13 +10,14 @@
     <h1>Homepage</h1>
     <button class="add-button"><a href="/new">Add new message</a></button>
     <div class="container">
-            <% messages.forEach((message) => { %>
-                <div>
-                    <h3><%= message.user %></h3>
-                    <h5>Created on <%= message.added %></h5>
-                    <p><%= message.text %></p>
+            <% for (let i = 0; i < messages.length; i++) { %>
+                <div class= message-<%= i %>>
+                    <h3><%= messages[i].user %></h3>
+                    <h5>Created on <%= messages[i].added %></h5>
+                    <p><%= messages[i].text %></p>
+                    <button>Details</button>
                 </div>
-            <% }) %>
+            <% } %>
     </div>
 </body>
 </html>

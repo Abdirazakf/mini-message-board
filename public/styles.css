@@ -13,10 +13,11 @@ a {
     text-decoration: none;
 }
 
-.add-button {
+button {
     display: block;
     margin: 0 auto;
     width: fit-content;
+    cursor: pointer;
 }
 
 .container {
