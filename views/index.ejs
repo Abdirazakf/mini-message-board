@@ -15,7 +15,9 @@
                     <h3><%= messages[i].user %></h3>
                     <h5>Created on <%= messages[i].added %></h5>
                     <p><%= messages[i].text %></p>
-                    <button>Details</button>
+                    <button>
+                        <a href="/message/<%= i %>">Details</a>
+                    </button>
                 </div>
             <% } %>
     </div>
